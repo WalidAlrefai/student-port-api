@@ -19,6 +19,10 @@ function start(port) {
   });
 }
 
+app.get('/',(req,res)=>{
+  res.send('server is alive')
+})
+
 app.use(error500);
 app.use("*", error404);
 module.exports = {
